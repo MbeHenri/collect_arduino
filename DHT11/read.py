@@ -6,9 +6,7 @@ from datetime import datetime
 PORT = "/dev/ttyACM0"
 BAUDRATE = 9600
 ser = serial.Serial(PORT, BAUDRATE, timeout=1)
-
-# Attendre que la connexion soit établie
-time.sleep(5)
+ser.open()
 
 # Temps d'attende entre les lectures du port série
 wait_time = 60
